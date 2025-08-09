@@ -62,7 +62,7 @@ const InteractiveProjects = () => {
       icon: TrendingUp,
       color: 'from-blue-600 to-cyan-500',
       metrics: { dashboards: '2', insights: '5+', queries: '20+' },
-      tags: ['SQL', 'Dashboarding', 'Data Modeling', 'End-to-end'],
+      tags: ['SQL', 'Dashboarding', 'Data Modeling'],
       complexity: 'Advanced',
       duration: '1 week',
       team: 'Solo Project'
