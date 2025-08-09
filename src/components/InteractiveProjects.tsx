@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ExternalLink, Github, Star, Play, Brain, TrendingUp } from 'lucide-react';
+import { ExternalLink, Github, Star, Play, Brain, TrendingUp, Droplets } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -10,6 +10,25 @@ const InteractiveProjects = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
   const projects = [
+    {
+      id: 4,
+      title: 'Flood Prediction with Machine Learning',
+      description: 'End-to-end regression model predicting flood probability with 94% R-squared accuracy, deployed as an interactive web app.',
+      longDescription: 'Developed a high-performance LightGBM model by engineering new features (e.g., LandslideRisk). The project involved model comparison, hyperparameter tuning, and deployment via Streamlit, solving challenges like large file handling with Git LFS.',
+      image: "https://www.predictiveanalyticstoday.com/wp-content/uploads/2020/01/Flood-Forecasting-and-Early-Warning-System-Dashboard.png",
+      technologies: ["Python", "Scikit-learn", "LightGBM", "Streamlit", "Pandas", "Git LFS"],
+      github: 'https://github.com/SRAVAN-DSAI/Flood_prediction_model',
+      demo: 'https://flood-prediction-model.streamlit.app/',
+      category: 'Machine Learning',
+      featured: true,
+      icon: Droplets,
+      color: 'from-cyan-500 to-blue-500',
+      metrics: { rSquared: '94%'},
+      tags: ['Regression', 'Deployment', 'Streamlit', 'Feature Engineering'],
+      complexity: 'Advanced',
+      duration: '1 week',
+      team: 'Solo Project'
+    },
     {
       id: 1,
       title: 'NLP News Article Classification with Hugging Face Transformers',
@@ -71,6 +90,7 @@ const InteractiveProjects = () => {
 
   const categories = [
     { id: 'all', label: 'All Projects', count: projects.length },
+    { id: 'Machine Learning', label: 'ML', count: projects.filter(p => p.category === 'Machine Learning').length },
     { id: 'NLP', label: 'NLP', count: projects.filter(p => p.category === 'NLP').length },
     { id: 'Audio Processing', label: 'Audio', count: projects.filter(p => p.category === 'Audio Processing').length },
     { id: 'Data Analysis', label: 'Data Analysis', count: projects.filter(p => p.category === 'Data Analysis').length }
@@ -99,7 +119,7 @@ const InteractiveProjects = () => {
       </div>
 
       <Tabs value={activeFilter} onValueChange={setActiveFilter} className="mb-12">
-        <TabsList className="grid w-full grid-cols-4 gap-1 h-auto p-1 bg-gray-100 rounded-xl">
+        <TabsList className="grid w-full grid-cols-5 gap-1 h-auto p-1 bg-gray-100 rounded-xl">
           {categories.map((category) => (
             <TabsTrigger
               key={category.id}
