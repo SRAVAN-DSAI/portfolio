@@ -15,7 +15,7 @@ const InteractiveProjects = () => {
       title: 'Flood Prediction with Machine Learning',
       description: 'End-to-end regression model predicting flood probability with 94% R-squared accuracy, deployed as an interactive web app.',
       longDescription: 'Developed a high-performance LightGBM model by engineering new features (e.g., LandslideRisk). The project involved model comparison, hyperparameter tuning, and deployment via Streamlit, solving challenges like large file handling with Git LFS.',
-      image: "https://www.predictiveanalyticstoday.com/wp-content/uploads/2020/01/Flood-Forecasting-and-Early-Warning-System-Dashboard.png",
+      image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.kaggle.com%2Fdatasets%2Faritra100%2Fflood-prediction-dataset&psig=AOvVaw1iVV_BuN9lCQO7SRx5NdEK&ust=1754856490261000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMDMmoPE_o4DFQAAAAAdAAAAABAE",
       technologies: ["Python", "Scikit-learn", "LightGBM", "Streamlit", "Pandas", "Git LFS"],
       github: 'https://github.com/SRAVAN-DSAI/Flood_prediction_model',
       demo: 'https://flood-prediction-model.streamlit.app/',
