@@ -47,17 +47,37 @@ const InteractiveProjects = () => {
       complexity: "Advanced",
       duration: "1 week",
       team: "Solo Project"
+    },
+    {
+      id: 3,
+      title: 'Logistics and Supply Chain Analysis',
+      description: 'End-to-end data analysis project using SQL, Power BI, and Tableau to optimize supply chain performance and assess risk.',
+      longDescription: 'Utilized SQL for advanced data modeling (star schema, feature engineering) and created interactive dashboards in Power BI and Tableau to visualize key insights on cost drivers, route risk, and operational efficiency.',
+      image: "https://miro.medium.com/v2/resize:fit:1400/1*yJj2I0_s55T55r04T4c0rQ.png",
+      technologies: ["SQL", "Power BI", "Tableau", "MySQL", "Git"],
+      github: "https://github.com/SRAVAN-DSAI/Logistics-Analysis",
+      demo: "https://public.tableau.com/shared/J2C5Q5HZ6?:display_count=n&:origin=viz_share_link",
+      category: 'Data Analysis',
+      featured: true,
+      icon: TrendingUp,
+      color: 'from-blue-600 to-cyan-500',
+      metrics: { dashboards: '2', insights: '5+', queries: '20+' },
+      tags: ['SQL', 'Dashboarding', 'Data Modeling', 'End-to-end'],
+      complexity: 'Advanced',
+      duration: '1 week',
+      team: 'Solo Project'
     }
   ];
 
   const categories = [
     { id: 'all', label: 'All Projects', count: projects.length },
     { id: 'NLP', label: 'NLP', count: projects.filter(p => p.category === 'NLP').length },
-    { id: 'Audio Processing', label: 'Audio', count: projects.filter(p => p.category === 'Audio Processing').length }
+    { id: 'Audio Processing', label: 'Audio', count: projects.filter(p => p.category === 'Audio Processing').length },
+    { id: 'Data Analysis', label: 'Data Analysis', count: projects.filter(p => p.category === 'Data Analysis').length }
   ];
 
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
+  const filteredProjects = activeFilter === 'all'
+    ? projects
     : projects.filter(project => project.category === activeFilter);
 
   const getComplexityColor = (complexity: string) => {
@@ -79,10 +99,10 @@ const InteractiveProjects = () => {
       </div>
 
       <Tabs value={activeFilter} onValueChange={setActiveFilter} className="mb-12">
-        <TabsList className="grid w-full grid-cols-3 gap-1 h-auto p-1 bg-gray-100 rounded-xl">
+        <TabsList className="grid w-full grid-cols-4 gap-1 h-auto p-1 bg-gray-100 rounded-xl">
           {categories.map((category) => (
-            <TabsTrigger 
-              key={category.id} 
+            <TabsTrigger
+              key={category.id}
               value={category.id}
               className="flex flex-col items-center p-3 data-[state=active]:bg-white data-[state=active]:shadow-sm rounded-lg transition-all duration-300"
             >
@@ -95,15 +115,15 @@ const InteractiveProjects = () => {
         <TabsContent value={activeFilter} className="mt-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {filteredProjects.map((project) => (
-              <Card 
-                key={project.id} 
+              <Card
+                key={project.id}
                 className="group border-0 shadow-lg bg-white/60 backdrop-blur-sm overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02]"
                 onMouseEnter={() => setHoveredProject(project.id)}
                 onMouseLeave={() => setHoveredProject(null)}
               >
                 <div className="relative overflow-hidden">
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-48 object-cover transition-transform duration-700 group-hover:scale-110"
                   />
@@ -174,9 +194,9 @@ const InteractiveProjects = () => {
                   
                   <div className="flex flex-wrap gap-1.5">
                     {project.technologies.slice(0, 4).map((tech) => (
-                      <Badge 
-                        key={tech} 
-                        variant="outline" 
+                      <Badge
+                        key={tech}
+                        variant="outline"
                         className="text-xs hover:shadow-md transition-all duration-300 hover:scale-105"
                       >
                         {tech}
@@ -191,9 +211,9 @@ const InteractiveProjects = () => {
                   
                   <div className="flex flex-wrap gap-1">
                     {project.tags.map((tag) => (
-                      <Badge 
-                        key={tag} 
-                        variant="secondary" 
+                      <Badge
+                        key={tag}
+                        variant="secondary"
                         className="text-xs bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors"
                       >
                         {tag}
