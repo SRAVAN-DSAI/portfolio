@@ -53,7 +53,7 @@ const InteractiveProjects = () => {
       title: 'Logistics and Supply Chain Analysis',
       description: 'End-to-end data analysis project using SQL, Power BI, and Tableau to optimize supply chain performance and assess risk.',
       longDescription: 'Utilized SQL for advanced data modeling (star schema, feature engineering) and created interactive dashboards in Power BI and Tableau to visualize key insights on cost drivers, route risk, and operational efficiency.',
-      image: "https://miro.medium.com/v2/resize:fit:1400/1*yJj2I0_s55T55r04T4c0rQ.png",
+      image: "https://acropolium.com/img/articles/supply-chain-analytics-software/img09.jpg",
       technologies: ["SQL", "Power BI", "Tableau", "MySQL", "Git"],
       github: "https://github.com/SRAVAN-DSAI/Logistics-Analysis",
       demo: "https://public.tableau.com/shared/J2C5Q5HZ6?:display_count=n&:origin=viz_share_link",
