@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ExternalLink, Github, Star, Play, Brain, TrendingUp, Droplets } from 'lucide-react';
+import { ExternalLink, Github, Star, Play, Brain, TrendingUp, Droplets, Camera } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -10,6 +10,25 @@ const InteractiveProjects = () => {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
   const projects = [
+    {
+      id: 5,
+      title: 'CLIP-Powered Image Search Engine',
+      description: 'An end-to-end text-to-image search engine built by fine-tuning a CLIP model and deployed as a live Gradio application.',
+      longDescription: 'This project fine-tunes an OpenAI CLIP model on the COCO 2017 dataset, uses FAISS for efficient vector similarity search, and is deployed as an interactive web app on Hugging Face Spaces. The system can search through thousands of images based on natural language text queries.',
+      image:'https://miro.medium.com/v2/resize:fit:1200/1*iP-_71a7d2n1bf0F3s3YGA.jpeg',
+      technologies: ["PyTorch", "Hugging Face Transformers", "FAISS", "Gradio", "Python"],
+      github: 'https://github.com/sravan837/clip-image-search',
+      demo: 'https://huggingface.co/spaces/sravan837/clip-image-search',
+      category: 'Computer Vision',
+      featured: true,
+      icon: Camera,
+      color: 'from-orange-500 to-red-500',
+      metrics: { 'Dataset Size': '5,000 Images', Model: 'CLIP ViT-B/32', 'Deployment': 'Hugging Face' },
+      tags: ['Fine-tuning', 'Vector Search', 'Gradio', 'Deployment'],
+      complexity: 'Advanced',
+      duration: '1 week',
+      team: 'Solo Project'
+    },
     {
       id: 4,
       title: 'Flood Prediction with Machine Learning',
@@ -91,6 +110,7 @@ const InteractiveProjects = () => {
   const categories = [
     { id: 'all', label: 'All Projects', count: projects.length },
     { id: 'Machine Learning', label: 'ML', count: projects.filter(p => p.category === 'Machine Learning').length },
+    { id: 'Computer Vision', label: 'CV', count: projects.filter(p => p.category === 'Computer Vision').length },
     { id: 'NLP', label: 'NLP', count: projects.filter(p => p.category === 'NLP').length },
     { id: 'Audio Processing', label: 'Audio', count: projects.filter(p => p.category === 'Audio Processing').length },
     { id: 'Data Analysis', label: 'Data Analysis', count: projects.filter(p => p.category === 'Data Analysis').length }
@@ -119,7 +139,7 @@ const InteractiveProjects = () => {
       </div>
 
       <Tabs value={activeFilter} onValueChange={setActiveFilter} className="mb-12">
-        <TabsList className="grid w-full grid-cols-5 gap-1 h-auto p-1 bg-gray-100 rounded-xl">
+        <TabsList className="grid w-full grid-cols-6 gap-1 h-auto p-1 bg-gray-100 rounded-xl">
           {categories.map((category) => (
             <TabsTrigger
               key={category.id}
