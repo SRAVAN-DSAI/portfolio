@@ -66,7 +66,7 @@ const InteractiveProjects = () => {
       complexity: 'Advanced',
       duration: '1 week',
       team: 'Solo Project'
-    }
+    },
     {
       id: 1,
       title: 'NLP News Article Classification with Hugging Face Transformers',
