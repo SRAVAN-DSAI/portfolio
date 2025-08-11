@@ -15,7 +15,7 @@ const InteractiveProjects = () => {
       title: 'CLIP-Powered Image Search Engine',
       description: 'An end-to-end text-to-image search engine built by fine-tuning a CLIP model and deployed as a live Gradio application.',
       longDescription: 'This project fine-tunes an OpenAI CLIP model on the COCO 2017 dataset, uses FAISS for efficient vector similarity search, and is deployed as an interactive web app on Hugging Face Spaces. The system can search through thousands of images based on natural language text queries.',
-      image:'https://miro.medium.com/v2/resize:fit:1200/1*iP-_71a7d2n1bf0F3s3YGA.jpeg',
+      image:'https://pypi-camo.freetls.fastly.net/850d18c6a9b80455eade607fe6f9db83a1c99eb3/68747470733a2f2f6769746875622e636f6d2f726f6d313530342f636c69702d72657472696576616c2f7261772f6d61696e2f646f635f6173736574732f636c69702d66726f6e742d7069632e706e67',
       technologies: ["PyTorch", "Hugging Face Transformers", "FAISS", "Gradio", "Python"],
       github: 'https://github.com/sravan837/clip-image-search',
       demo: 'https://huggingface.co/spaces/sravan837/clip-image-search',
@@ -48,6 +48,25 @@ const InteractiveProjects = () => {
       duration: '1 week',
       team: 'Solo Project'
     },
+    {
+      id: 3,
+      title: 'Logistics and Supply Chain Analysis',
+      description: 'End-to-end data analysis project using SQL, Power BI, and Tableau to optimize supply chain performance and assess risk.',
+      longDescription: 'Utilized SQL for advanced data modeling (star schema, feature engineering) and created interactive dashboards in Power BI and Tableau to visualize key insights on cost drivers, route risk, and operational efficiency.',
+      image: "https://acropolium.com/img/articles/supply-chain-analytics-software/img09.jpg",
+      technologies: ["SQL", "Power BI", "Tableau", "MySQL", "Git"],
+      github: "https://github.com/SRAVAN-DSAI/Logistics-Analysis",
+      demo: "https://public.tableau.com/shared/J2C5Q5HZ6?:display_count=n&:origin=viz_share_link",
+      category: 'Data Analysis',
+      featured: true,
+      icon: TrendingUp,
+      color: 'from-blue-600 to-cyan-500',
+      metrics: { dashboards: '2', insights: '5+', queries: '20+' },
+      tags: ['SQL', 'Dashboarding', 'Data Modeling'],
+      complexity: 'Advanced',
+      duration: '1 week',
+      team: 'Solo Project'
+    }
     {
       id: 1,
       title: 'NLP News Article Classification with Hugging Face Transformers',
@@ -85,25 +104,6 @@ const InteractiveProjects = () => {
       complexity: "Advanced",
       duration: "1 week",
       team: "Solo Project"
-    },
-    {
-      id: 3,
-      title: 'Logistics and Supply Chain Analysis',
-      description: 'End-to-end data analysis project using SQL, Power BI, and Tableau to optimize supply chain performance and assess risk.',
-      longDescription: 'Utilized SQL for advanced data modeling (star schema, feature engineering) and created interactive dashboards in Power BI and Tableau to visualize key insights on cost drivers, route risk, and operational efficiency.',
-      image: "https://acropolium.com/img/articles/supply-chain-analytics-software/img09.jpg",
-      technologies: ["SQL", "Power BI", "Tableau", "MySQL", "Git"],
-      github: "https://github.com/SRAVAN-DSAI/Logistics-Analysis",
-      demo: "https://public.tableau.com/shared/J2C5Q5HZ6?:display_count=n&:origin=viz_share_link",
-      category: 'Data Analysis',
-      featured: true,
-      icon: TrendingUp,
-      color: 'from-blue-600 to-cyan-500',
-      metrics: { dashboards: '2', insights: '5+', queries: '20+' },
-      tags: ['SQL', 'Dashboarding', 'Data Modeling'],
-      complexity: 'Advanced',
-      duration: '1 week',
-      team: 'Solo Project'
     }
   ];
 
