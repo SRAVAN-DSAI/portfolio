@@ -92,7 +92,7 @@ const InteractiveProjects = () => {
       description: "Advanced audio classification using a fine-tuned ResNet18 model, achieving 96.37% accuracy on urban sound detection.",
       longDescription: "This project implements a convolutional neural network (ResNet18) fine-tuned with PyTorch to classify audio from the UrbanSound8K dataset into 10 categories. Features include real-time spectrogram generation, batch processing, and deployment via Streamlit, with visualizations using Plotly.",
       image: "https://cdn-uploads.huggingface.co/production/uploads/6290ec00a29097b211b94f0f/IV-nahjZbufzIzGBUP-_e.png",
-      technologies: ["Python", "PyTorch", "Librosa", "Streamlit", "Plotly"],
+      technologies: ["Python", "PyTorch", "Librosa", "Streamlit", "Plotly","Hugging Face Transformers"],
       github: "https://github.com/SRAVAN-DSAI/Sound-Classifier",
       demo: "https://waveform-classifier.streamlit.app/",
       category: "Audio Processing",
