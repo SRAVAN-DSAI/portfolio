@@ -33,7 +33,7 @@ const InteractiveProjects = () => {
       id: 4,
       title: 'Flood Prediction with Machine Learning',
       description: 'Regression model predicting flood probability with 90% R-squared accuracy, deployed as an interactive web app.',
-      longDescription: 'Developed a high-performance LightGBM model by engineering new features (e.g., LandslideRisk). The project involved model comparison, hyperparameter tuning, and deployment via Streamlit, solving challenges like large file handling with Git LFS.',
+      longDescription: 'Developed a high-performance LightGBM model by engineering new features (e.g., LandslideRisk). The project involved model comparison, hyperparameter tuning, and deployment via Gradio, solving challenges like large file handling with Git LFS.',
       image:'https://t4.ftcdn.net/jpg/04/47/65/17/240_F_447651703_Vn9GtLDPktVqzMPRB5lATVmjaDp2elLc.jpg',
       technologies: ["Python", "Scikit-learn", "LightGBM", "Gradio", "Pandas","Plotly", "LangGraph"],
       github: 'https://github.com/SRAVAN-DSAI/Flood_prediction_model',
