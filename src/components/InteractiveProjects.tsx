@@ -37,7 +37,7 @@ const InteractiveProjects = () => {
       image:'https://t4.ftcdn.net/jpg/04/47/65/17/240_F_447651703_Vn9GtLDPktVqzMPRB5lATVmjaDp2elLc.jpg',
       technologies: ["Python", "Scikit-learn", "LightGBM", "Streamlit", "Pandas", "Git LFS"],
       github: 'https://github.com/SRAVAN-DSAI/Flood_prediction_model',
-      demo: 'https://flood-prediction-model.streamlit.app/',
+      demo: 'https://huggingface.co/spaces/sravan837/flood-prediction-app',
       category: 'Machine Learning',
       featured: true,
       icon: Droplets,
