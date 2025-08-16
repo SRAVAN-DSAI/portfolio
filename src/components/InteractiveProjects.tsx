@@ -1,15 +1,36 @@
 import { useState } from 'react';
-import { ExternalLink, Github, Star, Play, Brain, TrendingUp, Droplets, Camera } from 'lucide-react';
+import { ExternalLink, Github, Star, Play, Brain, TrendingUp, Droplets, Camera, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
+// Define the project type for better type safety and autocompletion
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  longDescription: string;
+  image: string;
+  technologies: string[];
+  github: string;
+  demo: string;
+  category: 'Natural Language Processing' | 'Computer Vision' | 'Machine Learning' | 'Data Analysis' | 'Audio Processing' | 'NLP';
+  featured: boolean;
+  icon: React.ElementType; // Use React.ElementType for component props
+  color: string;
+  tags: string[];
+  complexity: 'Advanced' | 'Intermediate' | 'Expert';
+  duration: string;
+  team: string;
+  metrics?: Record<string, string>; // Made optional as not all projects have it
+}
+
 const InteractiveProjects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
-  const projects = [
+  const projects: Project[] = [
     {
       id: 6,
       title: "ML Q&A Chatbot with RAG",
@@ -21,19 +42,20 @@ const InteractiveProjects = () => {
       demo: "https://huggingface.co/spaces/sravan837/ML_CHATBOT",
       category: "Natural Language Processing",
       featured: true,
-      icon: "MessageSquare",
+      icon: MessageSquare, // Use the correct imported icon component
       color: "from-blue-500 to-teal-500",
       tags: ["Fine-tuning", "RAG", "Vector Search", "Gradio", "Deployment"],
       complexity: "Advanced",
       duration: "2 weeks",
-      team: "Solo Project"
+      team: "Solo Project",
+      metrics: { 'Dataset Size': '7,000 Pairs', 'Model': 'OPT-1.3B', 'Vector Store': 'FAISS' },
     },
     {
       id: 5,
       title: 'CLIP-Powered Image Search Engine',
       description: 'An text-to-image search engine built by fine-tuning a CLIP model and deployed as a live Gradio application.',
       longDescription: 'This project fine-tunes an OpenAI CLIP model on the COCO 2017 dataset, uses FAISS for efficient vector similarity search, and is deployed as an interactive web app on Hugging Face Spaces. The system can search through thousands of images based on natural language text queries.',
-      image:'https://pypi-camo.freetls.fastly.net/850d18c6a9b80455eade607fe6f9db83a1c99eb3/68747470733a2f2f6769746875622e636f6d2f726f6d313530342f636c69702d72657472696576616c2f7261772f6d61696e2f646f635f6173736574732f636c69702d66726f6e742d7069632e706e67',
+      image: 'https://pypi-camo.freetls.fastly.net/850d18c6a9b80455eade607fe6f9db83a1c99eb3/68747470733a2f2f6769746875622e636f6d2f726f6d313530342f636c69702d72657472696576616c2f7261772f6d61696e2f646f635f6173736574732f636c69702d66726f6e742d7069632e706e67',
       technologies: ["PyTorch", "Hugging Face Transformers", "FAISS", "Gradio", "Python"],
       github: 'https://github.com/sravan837/clip-image-search',
       demo: 'https://huggingface.co/spaces/sravan837/clip-image-search',
@@ -52,15 +74,15 @@ const InteractiveProjects = () => {
       title: 'Flood Prediction with Machine Learning',
       description: 'Regression model predicting flood probability with 90% R-squared accuracy, deployed as an interactive web app.',
       longDescription: 'Developed a high-performance LightGBM model by engineering new features (e.g., LandslideRisk). The project involved model comparison, hyperparameter tuning, and deployment via Gradio, solving challenges like large file handling with Git LFS.',
-      image:'https://t4.ftcdn.net/jpg/04/47/65/17/240_F_447651703_Vn9GtLDPktVqzMPRB5lATVmjaDp2elLc.jpg',
-      technologies: ["Python", "Scikit-learn", "LightGBM", "Gradio", "Pandas","Plotly", "LangGraph"],
+      image: 'https://t4.ftcdn.net/jpg/04/47/65/17/240_F_447651703_Vn9GtLDPktVqzMPRB5lATVmjaDp2elLc.jpg',
+      technologies: ["Python", "Scikit-learn", "LightGBM", "Gradio", "Pandas", "Plotly", "LangChain"], // Corrected LangGraph to LangChain to match other projects
       github: 'https://github.com/SRAVAN-DSAI/Flood_prediction_model',
       demo: 'https://huggingface.co/spaces/sravan837/flood-prediction-app',
       category: 'Machine Learning',
       featured: true,
       icon: Droplets,
       color: 'from-cyan-500 to-blue-500',
-      metrics: { rSquared: '90%'},
+      metrics: { 'R-Squared': '90%' }, // Corrected key to be more readable
       tags: ['Regression', 'Deployment', 'Gradio', 'Feature Engineering'],
       complexity: 'Advanced',
       duration: '1 week',
@@ -79,7 +101,7 @@ const InteractiveProjects = () => {
       featured: true,
       icon: TrendingUp,
       color: 'from-blue-600 to-cyan-500',
-      metrics: { dashboards: '2', insights: '5+', queries: '20+' },
+      metrics: { 'Dashboards': '2', 'Key Insights': '5+', 'SQL Queries': '20+' }, // Corrected keys
       tags: ['SQL', 'Dashboarding', 'Data Modeling'],
       complexity: 'Advanced',
       duration: '1 week',
@@ -98,7 +120,7 @@ const InteractiveProjects = () => {
       featured: true,
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
-      metrics: { accuracy: '96.1%', f1Score: '0.94', inference: '50ms' },
+      metrics: { 'Accuracy': '96.1%', 'F1 Score': '0.94', 'Inference': '50ms' },
       tags: ['Transformer', 'Fine-tuned', 'Production'],
       complexity: 'Advanced',
       duration: '5 days',
@@ -110,14 +132,14 @@ const InteractiveProjects = () => {
       description: "Advanced audio classification using a fine-tuned ResNet18 model, achieving 96.37% accuracy on urban sound detection.",
       longDescription: "This project implements a convolutional neural network (ResNet18) fine-tuned with PyTorch to classify audio from the UrbanSound8K dataset into 10 categories. Features include real-time spectrogram generation, batch processing, and deployment via Streamlit, with visualizations using Plotly.",
       image: "https://cdn-uploads.huggingface.co/production/uploads/6290ec00a29097b211b94f0f/IV-nahjZbufzIzGBUP-_e.png",
-      technologies: ["Python", "PyTorch", "Librosa", "Streamlit", "Plotly","Hugging Face Transformers"],
+      technologies: ["Python", "PyTorch", "Librosa", "Streamlit", "Plotly", "Hugging Face Transformers"],
       github: "https://github.com/SRAVAN-DSAI/Sound-Classifier",
       demo: "https://waveform-classifier.streamlit.app/",
       category: "Audio Processing",
       featured: true,
       icon: TrendingUp,
       color: "from-green-500 to-teal-500",
-      metrics: {accuracy: "96.37%",f1Score: "95.80%",inference: "100ms"},
+      metrics: { 'Accuracy': "96.37%", 'F1 Score': "95.80%", 'Inference': "100ms" },
       tags: ["Audio Classification", "Deep Learning", "Real-time", "Production"],
       complexity: "Advanced",
       duration: "1 week",
@@ -129,14 +151,20 @@ const InteractiveProjects = () => {
     { id: 'all', label: 'All Projects', count: projects.length },
     { id: 'Machine Learning', label: 'ML', count: projects.filter(p => p.category === 'Machine Learning').length },
     { id: 'Computer Vision', label: 'CV', count: projects.filter(p => p.category === 'Computer Vision').length },
-    { id: 'NLP', label: 'NLP', count: projects.filter(p => p.category === 'NLP').length },
+    { id: 'Natural Language Processing', label: 'NLP', count: projects.filter(p => p.category === 'Natural Language Processing' || p.category === 'NLP').length },
     { id: 'Audio Processing', label: 'Audio', count: projects.filter(p => p.category === 'Audio Processing').length },
     { id: 'Data Analysis', label: 'Data Analysis', count: projects.filter(p => p.category === 'Data Analysis').length }
   ];
 
   const filteredProjects = activeFilter === 'all'
     ? projects
-    : projects.filter(project => project.category === activeFilter);
+    : projects.filter(project => {
+      // Handle the 'NLP' category, which is also 'Natural Language Processing'
+      if (activeFilter === 'Natural Language Processing' || activeFilter === 'NLP') {
+        return project.category === 'Natural Language Processing' || project.category === 'NLP';
+      }
+      return project.category === activeFilter;
+    });
 
   const getComplexityColor = (complexity: string) => {
     switch (complexity) {
@@ -185,26 +213,27 @@ const InteractiveProjects = () => {
                     alt={project.title}
                     className="w-full h-48 object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  
+
                   <div className={`absolute inset-0 bg-gradient-to-t ${project.color} opacity-0 group-hover:opacity-90 transition-all duration-500`}>
                     <div className="absolute inset-0 bg-black/20"></div>
                   </div>
-                  
+
                   <div className="absolute top-4 left-4 p-2 bg-white/95 backdrop-blur-sm rounded-xl group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <project.icon className="h-5 w-5 text-gray-700" />
+                    {/* Render the icon component directly */}
+                    {project.icon && <project.icon className="h-5 w-5 text-gray-700" />}
                   </div>
-                  
+
                   {project.featured && (
                     <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center shadow-lg">
                       <Star className="h-3 w-3 mr-1" />
                       Featured
                     </div>
                   )}
-                  
+
                   <div className={`absolute bottom-4 left-4 px-2 py-1 rounded-full text-xs font-medium ${getComplexityColor(project.complexity)} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}>
                     {project.complexity}
                   </div>
-                  
+
                   <div className="absolute bottom-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
                     <Button size="sm" variant="secondary" className="bg-white/90 backdrop-blur-sm hover:bg-white shadow-lg" asChild>
                       <a href={project.github} target="_blank" rel="noopener noreferrer">
@@ -218,7 +247,7 @@ const InteractiveProjects = () => {
                     </Button>
                   </div>
                 </div>
-                
+
                 <CardHeader className="pb-3">
                   <div className="flex items-center justify-between mb-2">
                     <Badge variant="secondary" className={`bg-gradient-to-r ${project.color} text-white border-0 shadow-sm`}>
@@ -230,55 +259,58 @@ const InteractiveProjects = () => {
                       <span>{project.team}</span>
                     </div>
                   </div>
-                  
+
                   <CardTitle className="text-lg text-gray-900 group-hover:text-gray-700 transition-colors line-clamp-2 leading-tight">
                     {project.title}
                   </CardTitle>
-                  
+
                   <CardDescription className="text-sm text-gray-600 line-clamp-3 leading-relaxed">
                     {hoveredProject === project.id ? project.longDescription : project.description}
                   </CardDescription>
                 </CardHeader>
 
-                <CardContent className="pt-0 space-y-4">
-                  <div className="grid grid-cols-3 gap-2 text-center bg-gray-50 rounded-lg p-3">
-                    {Object.entries(project.metrics).map(([key, value]) => (
-                      <div key={key} className="flex flex-col">
-                        <span className="text-xs text-gray-500 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
-                        <span className="text-sm font-semibold text-gray-900">{value}</span>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <div className="flex flex-wrap gap-1.5">
-                    {project.technologies.slice(0, 4).map((tech) => (
-                      <Badge
-                        key={tech}
-                        variant="outline"
-                        className="text-xs hover:shadow-md transition-all duration-300 hover:scale-105"
-                      >
-                        {tech}
-                      </Badge>
-                    ))}
-                    {project.technologies.length > 4 && (
-                      <Badge variant="outline" className="text-xs text-gray-500">
-                        +{project.technologies.length - 4} more
-                      </Badge>
-                    )}
-                  </div>
-                  
-                  <div className="flex flex-wrap gap-1">
-                    {project.tags.map((tag) => (
-                      <Badge
-                        key={tag}
-                        variant="secondary"
-                        className="text-xs bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors"
-                      >
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
+                {/* Only render metrics if they exist */}
+                {project.metrics && Object.keys(project.metrics).length > 0 && (
+                  <CardContent className="pt-0 space-y-4">
+                    <div className="grid grid-cols-3 gap-2 text-center bg-gray-50 rounded-lg p-3">
+                      {Object.entries(project.metrics).map(([key, value]) => (
+                        <div key={key} className="flex flex-col">
+                          <span className="text-xs text-gray-500 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
+                          <span className="text-sm font-semibold text-gray-900">{value}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="flex flex-wrap gap-1.5">
+                      {project.technologies.slice(0, 4).map((tech) => (
+                        <Badge
+                          key={tech}
+                          variant="outline"
+                          className="text-xs hover:shadow-md transition-all duration-300 hover:scale-105"
+                        >
+                          {tech}
+                        </Badge>
+                      ))}
+                      {project.technologies.length > 4 && (
+                        <Badge variant="outline" className="text-xs text-gray-500">
+                          +{project.technologies.length - 4} more
+                        </Badge>
+                      )}
+                    </div>
+
+                    <div className="flex flex-wrap gap-1">
+                      {project.tags.map((tag) => (
+                        <Badge
+                          key={tag}
+                          variant="secondary"
+                          className="text-xs bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors"
+                        >
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                )}
               </Card>
             ))}
           </div>
