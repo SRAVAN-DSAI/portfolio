@@ -11,22 +11,22 @@ const InteractiveProjects = () => {
 
   const projects = [
     {
-      "id": 6,
-      "title": "ML Q&A Chatbot with RAG",
-      "description": "A Retrieval-Augmented Generation (RAG) chatbot for answering machine learning questions, deployed as a Gradio app on Hugging Face Spaces.",
-      "longDescription": "This project implements a Retrieval-Augmented Generation (RAG) pipeline using a fine-tuned facebook/opt-1.3b model with LoRA adapters and a FAISS vector store for efficient retrieval. It leverages 7,000 Q&A pairs from 14 JSON datasets to provide accurate, context-aware answers to machine learning questions. The system is deployed as an interactive Gradio web app on Hugging Face Spaces, featuring a user-friendly interface with a toggle for retrieval details (context and sources).",
-      "image": "https://cdn.educba.com/academy/wp-content/uploads/2024/12/Retrieval-Augmented-Generation-RAG.png",
-      "technologies": ["PyTorch", "Hugging Face Transformers", "LangChain", "FAISS", "Gradio", "Python"],
-      "github": "https://github.com/SRAVAN-DSAI/ML_RAG",
-      "demo": "https://huggingface.co/spaces/sravan837/ML_CHATBOT",
-      "category": "Natural Language Processing",
-      "featured": true,
-      "icon": "MessageSquare",
-      "color": "from-blue-500 to-teal-500",
-      "tags": ["Fine-tuning", "RAG", "Vector Search", "Gradio", "Deployment"],
-      "complexity": "Advanced",
-      "duration": "2 weeks",
-      "team": "Solo Project"
+      id: 6,
+      title: "ML Q&A Chatbot with RAG",
+      description: "A Retrieval-Augmented Generation (RAG) chatbot for answering machine learning questions, deployed as a Gradio app on Hugging Face Spaces.",
+      longDescription: "This project implements a Retrieval-Augmented Generation (RAG) pipeline using a fine-tuned facebook/opt-1.3b model with LoRA adapters and a FAISS vector store for efficient retrieval. It leverages 7,000 Q&A pairs from 14 JSON datasets to provide accurate, context-aware answers to machine learning questions. The system is deployed as an interactive Gradio web app on Hugging Face Spaces, featuring a user-friendly interface with a toggle for retrieval details (context and sources).",
+      image: "https://cdn.educba.com/academy/wp-content/uploads/2024/12/Retrieval-Augmented-Generation-RAG.png",
+      technologies: ["PyTorch", "Hugging Face Transformers", "LangChain", "FAISS", "Gradio", "Python"],
+      github: "https://github.com/SRAVAN-DSAI/ML_RAG",
+      demo: "https://huggingface.co/spaces/sravan837/ML_CHATBOT",
+      category: "Natural Language Processing",
+      featured: true,
+      icon: "MessageSquare",
+      color: "from-blue-500 to-teal-500",
+      tags: ["Fine-tuning", "RAG", "Vector Search", "Gradio", "Deployment"],
+      complexity: "Advanced",
+      duration: "2 weeks",
+      team: "Solo Project"
     },
     {
       id: 5,
