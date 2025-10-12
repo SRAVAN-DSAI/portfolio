@@ -124,7 +124,7 @@ const Hero = () => {
               className="border-2 border-gray-300 hover:border-blue-600 hover:bg-blue-50 transition-all duration-300"
               asChild
             >
-              <a href="https://drive.google.com/file/d/1eUSgvNZ8f9nkz4KiysD5zOBRJbhDwIiK/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <a href="https://drive.google.com/file/d/1nDaoEC5m45RBwLVrEk94YiN77cd4PDgV/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                 <Download className="mr-2 h-5 w-5" />
                 Resume
               </a>
