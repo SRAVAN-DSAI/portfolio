@@ -4,8 +4,8 @@ import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
-import AdvancedSkillsMatrix from '@/components/AdvancedSkillsMatrix';
-import InteractiveProjects from '@/components/InteractiveProjects';
+import Skills from '@/components/Skills';
+import Projects from '@/components/Projects';
 import Experience from '@/components/Experience';
 import Education from '@/components/Education';
 import Contact from '@/components/Contact';
@@ -239,14 +239,14 @@ const Index = () => {
       {/* Advanced Skills Section */}
       <section id="skills" className="py-24 bg-gradient-to-br from-white/80 via-blue-50/50 to-purple-50/50 relative">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-        <AdvancedSkillsMatrix />
+        <Skills />
       </section>
 
       {/* Interactive Projects Section */}
       <section id="projects" className="py-24 relative">
         <div className="absolute inset-0 bg-gradient-to-l from-cyan-50/30 to-blue-50/30"></div>
         <div className="relative">
-          <InteractiveProjects />
+          <Projects />
         </div>
       </section>
 
