@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Skills from '@/components/Skills';
-import InteractiveProjects from '@/components/Projects';
+import Projects from '@/components/InteractiveProjects';
 import Experience from '@/components/Experience';
 import Education from '@/components/Education';
 import Contact from '@/components/Contact';
