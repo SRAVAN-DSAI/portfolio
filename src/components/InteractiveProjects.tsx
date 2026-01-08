@@ -33,22 +33,22 @@ const InteractiveProjects = () => {
   const projects: Project[] = [
     {
       id: 6,
-      title: "ML Q&A Chatbot with RAG",
-      description: "A Retrieval-Augmented Generation (RAG) chatbot for answering machine learning questions, deployed as a Gradio app on Hugging Face Spaces.",
-      longDescription: "This project implements a Retrieval-Augmented Generation (RAG) pipeline using a fine-tuned facebook/opt-1.3b model with LoRA adapters and a FAISS vector store for efficient retrieval. It leverages 7,000 Q&A pairs from 14 JSON datasets to provide accurate, context-aware answers to machine learning questions. The system is deployed as an interactive Gradio web app on Hugging Face Spaces, featuring a user-friendly interface with a toggle for retrieval details (context and sources).",
+      title: "StyleScan AI: Multimodal Fashion Valuation",
+      description: "A Multimodal RAG system for fashion appraisal using CLIP, Qdrant, and Llama 3.2, deployed with Docker and Streamlit.",
+      longDescription: "StyleScan AI is a sophisticated valuation engine that addresses pricing ambiguity in the Indian fashion market. It features a Multimodal RAG architecture combining CLIP (ViT-B-32) for visual embeddings and a Qdrant vector store to process 50,000+ items. The system uses an XGBoost regression engine with log-transformation and brand target encoding to predict prices in INR (₹). It also integrates Llama 3.2 (1B) as an autonomous agent to provide explainable appraisals and brand equity analysis, all served via a Dockerized Streamlit dashboard with real-time market validation through DuckDuckGo API.",
       image: "https://cdn.educba.com/academy/wp-content/uploads/2024/12/Retrieval-Augmented-Generation-RAG.png",
-      technologies: ["PyTorch", "Hugging Face Transformers", "LangChain", "FAISS", "Gradio", "Python"],
-      github: "https://github.com/SRAVAN-DSAI/ML_RAG",
+      technologies: ["PyTorch", "Qdrant", "Llama 3.2", "XGBoost", "Docker", "Streamlit", "Python"],
+      github: "https://github.com/SRAVAN-DSAI/stylescan-ai",
       demo: "https://huggingface.co/spaces/sravan837/ML_CHATBOT",
-      category: "Natural Language Processing",
+      category: "Computer Vision & NLP",
       featured: true,
-      icon: MessageSquare, // Use the correct imported icon component
+      icon: ShoppingBag, // Use the correct imported icon component
       color: "from-blue-500 to-teal-500",
-      tags: ["Fine-tuning", "RAG", "Vector Search", "Gradio", "Deployment"],
+      tags: ["Multimodal RAG", "Computer Vision", "Agentic AI", "XGBoost", "Docker"],
       complexity: "Advanced",
       duration: "2 weeks",
       team: "Solo Project",
-      metrics: { 'Dataset Size': '7,000 Pairs', 'Model': 'OPT-1.3B', 'Vector Store': 'FAISS' },
+      metrics: { 'Dataset': '50K+ Items', 'Accuracy': '0.70 R²', 'MAE': '₹476' , 'Model': 'llama 3.2', 'Vector Store': 'Qdrant' },
     },
     {
       id: 5,
