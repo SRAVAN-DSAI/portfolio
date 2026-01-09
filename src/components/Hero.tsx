@@ -91,7 +91,7 @@ const Hero = () => {
               </Badge>
             </div>
 
-            {/* Pipeline Stats */}
+            {/* Pipeline Stats 
             <div className="grid grid-cols-3 gap-4 pt-6 max-w-md">
               <div className="text-center p-3 bg-white/60 backdrop-blur-sm rounded-xl border border-gray-200/50">
                 <div className="text-2xl font-bold text-blue-600">15+</div>
@@ -106,7 +106,7 @@ const Hero = () => {
                 <div className="text-xs text-gray-600">Accuracy</div>
               </div>
             </div>
-          </div>
+          </div>*/}
           
           <div className="flex flex-wrap gap-4">
             <Button 
