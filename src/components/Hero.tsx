@@ -64,11 +64,10 @@ const Hero = () => {
             </div>
             
             <p className="text-lg text-gray-600 max-w-2xl leading-relaxed mt-6">
-              Passionate about transforming complex data into 
-              <span className="text-blue-600 font-semibold"> actionable insights</span>. 
-              I specialize in machine learning, deep learning, and data visualization, building 
-              <span className="text-purple-600 font-semibold"> intelligent solutions</span> that drive 
-              <span className="text-cyan-600 font-semibold"> business innovation</span>.
+              Aerospace Engineering Student at <span className="text-blue-600 font-semibold">IIT Bombay</span> specializing in 
+              <span className="text-purple-600 font-semibold"> Machine Learning Engineering</span>. I build and deploy end-to-end 
+              pipelines—including Multimodal RAG and Neural Networks—translating complex engineering into 
+              <span className="text-cyan-600 font-semibold"> scalable AI solutions</span>.
             </p>
 
             {/* Enhanced Achievement highlights with ML pipeline stages */}
