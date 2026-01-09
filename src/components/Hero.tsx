@@ -105,8 +105,8 @@ const Hero = () => {
                 <div className="text-2xl font-bold text-green-600">95%</div>
                 <div className="text-xs text-gray-600">Accuracy</div>
               </div>
-            </div>
-          </div>*/}
+            </div> */}
+          </div>
           
           <div className="flex flex-wrap gap-4">
             <Button 
