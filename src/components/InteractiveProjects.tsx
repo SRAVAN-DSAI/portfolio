@@ -34,12 +34,12 @@ const InteractiveProjects = () => {
     {
       id: 6,
       title: "StyleScan AI: Multimodal Fashion Valuation",
-      description: "A Multimodal RAG system for fashion appraisal using CLIP, Qdrant, and Llama 3.2, deployed with Docker and Streamlit.",
+      description: "A Multimodal RAG system for fashion appraisal using CLIP, Qdrant, and Llama 3.2, deployed with Docker and Streamlit locally follow the deployment process from the Readme file(click on play button).",
       longDescription: "StyleScan AI is a sophisticated valuation engine that addresses pricing ambiguity in the Indian fashion market. It features a Multimodal RAG architecture combining CLIP (ViT-B-32) for visual embeddings and a Qdrant vector store to process 50,000+ items. The system uses an XGBoost regression engine with log-transformation and brand target encoding to predict prices in INR (₹). It also integrates Llama 3.2 (1B) as an autonomous agent to provide explainable appraisals and brand equity analysis, all served via a Dockerized Streamlit dashboard with real-time market validation through DuckDuckGo API.",
       image: "https://cdn.educba.com/academy/wp-content/uploads/2024/12/Retrieval-Augmented-Generation-RAG.png",
       technologies: ["PyTorch", "Qdrant", "Llama 3.2", "XGBoost", "Docker", "Streamlit", "Python"],
       github: "https://github.com/SRAVAN-DSAI/stylescan-ai",
-      demo: "https://huggingface.co/spaces/sravan837/ML_CHATBOT",
+      demo: "https://github.com/SRAVAN-DSAI/stylescan-ai/blob/main/README.md",
       category: "Computer Vision & NLP",
       featured: true,
       icon: MessageSquare, // Use the correct imported icon component
