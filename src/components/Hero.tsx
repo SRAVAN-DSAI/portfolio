@@ -64,12 +64,9 @@ const Hero = () => {
             </div>
             
             <p className="text-lg text-gray-600 max-w-2xl leading-relaxed mt-6">
-              Aerospace Engineering student at <span className="text-blue-600 font-semibold">IIT Bombay</span> 
-              bridging the gap between physical systems and 
+              Aerospace Engineering student at <span className="text-blue-600 font-semibold"> IIT Bombay </span> bridging the gap between physical systems and 
               <span className="text-purple-600 font-semibold"> Machine Learning Engineering</span>. 
-              I specialize in architecting end-to-end 
-              <span className="text-cyan-600 font-semibold"> scalable AI solutions</span>, 
-              from Multimodal RAG pipelines to production-ready neural networks.
+              I specialize in architecting end-to-end <span className="text-cyan-600 font-semibold"> scalable AI solutions</span>, from Multimodal RAG pipelines to production-ready neural networks.
             </p>
 
             {/* Enhanced Achievement highlights with ML pipeline stages */}
