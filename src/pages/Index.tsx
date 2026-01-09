@@ -211,7 +211,7 @@ const Index = () => {
                     className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white border-0 rounded-xl hover:shadow-lg transition-all duration-300" 
                     asChild
                   >
-                    <a href="https://drive.google.com/file/d/1eUSgvNZ8f9nkz4KiysD5zOBRJbhDwIiK/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    <a href="https://drive.google.com/file/d/1zWy8DBkD8pA85c_JbXkJ1v6jy-N3OdkX/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="h-4 w-4 mr-2" />
                       Resume
                     </a>
